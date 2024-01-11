@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;1,200;1,300&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+
+/*! Base Rule */
+p,
+li,
+a {
+    font-size: 18px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+    color: var(--para-color);
+    text-decoration: none;
+}
+
+a {
+    text-transform: capitalize;
+}
+
+
+/*! layoyt */
+.container {
+    width: 80%;
+    margin: 0px auto;
+    padding: 10px 10px;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-two-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/*! Them */
+
+:root {
+    --main-color: #1770ff;
+    --bg-color: #ffffff;
+    --suporting-color: #ebf3fe;
+    --font-color: #424242;
+    --heading-color: #000a19;
+    --para-color: #404e4d;
+    --btn-hovercolor: rgb(0 68 177);
+    --btn-boxshadow: 0px 0px 7px 0px #2c32ff;
+}
+
+
+/*! Module / Reuseable */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: var(--main-color);
+    color: var(--suporting-color);
+    border-radius: 7px;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: var(--btn-hovercolor);
+        cursor: pointer;
+        box-shadow: var(--btn-boxshadow);
+    }
+}
+
+.section-common-heading{
+    font-size: 25px;
+    color: var(--font-color);
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+} 
+.section-common-subheading{
+    color: var(--heading-color);
+    font-size: 15px;
+}
+
+
+
+/*? -------------- Start Navbar Section --------------- */
+.navbar-brand .logo-container {
+    height: auto;
+    width: 190px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    & .first-name {
+        background-color: #0062ff;
+        color: #fff7e8;
+        margin-right: 5px;
+        border-radius: 3px;
+    }
+
+    ;
+    padding: 4px 6px;
+    font-size: 18px;
+}
+
+.section-navbar {
+    width: 100%;
+    box-shadow: 0px -5px 16px 0px black;
+}
+
+.section-navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-navbar .navbar-menu ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+
+
+    & li,
+    a {
+        color: var(--heading-color);
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-block;
+        position: relative;
+
+
+        & ::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            border-bottom: 2px solid var(--main-color);
+            transition: 0.4s linear;
+        }
+
+        & :hover:after {
+            width: 100%;
+            color: var(--main-color);
+        }
+
+    }
+
+}
+
+/*? -------------- End Navbar Section --------------- */
+
+
+
+
+/*? -------------- Start Hero Section --------------- */
+main {
+    background: linear-gradient(49deg, rgba(60, 167, 246, 1) 10%, rgba(166, 145, 255, 1) 50%, rgba(255, 255, 255, 1) 90%);
+    position: relative;
+}
+
+.section-heroimage img {
+    width: 100%;
+    height: auto;
+}
+
+.section-hero .grid {
+    align-items: center;
+    gap: 50px;
+
+    & .hero-subheading {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        word-spacing: 5px;
+        font-size: 15px;
+        color: var(--main-color);
+        font-weight: bold;
+    }
+
+    & .hero-heading {
+        font-size: 38px;
+        text-transform: capitalize;
+        font-family: 'Jost', sans-serif;
+        color: var(--heading-color);
+
+    }
+    & .hero-para{
+        color: var(--suporting-color);
+        margin: 0px 0px 40px 0px;
+        line-height: 24px;
+    }
+}
+
+
+/*! Shape Divider */
+
+.custom-shape-divider-bottom-1703694566 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1703694566 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1703694566 .shape-fill {
+    fill: #FFFFFF;
+}
+/*? -------------- End Hero Section --------------- */
+
+
+
+
+/*? -------------- Start about Section --------------- */
+.section-about img{
+    background-color: var(--suporting-color);
+    padding: 10px;
+    width: 80px;
+    height: auto;
+    border-radius: 100%;
+}
+
+/*? -------------- End about Section --------------- */
