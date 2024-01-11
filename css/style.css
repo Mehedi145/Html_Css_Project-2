@@ -43,6 +43,10 @@ a {
 .grid-two-cols {
     grid-template-columns: repeat(2, 1fr);
 }
+.grid-three-cols{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
 
 /*! Them */
 
@@ -230,11 +234,27 @@ main {
 
 /*? -------------- Start about Section --------------- */
 .section-about img{
-    background-color: var(--suporting-color);
+    background-color: #90bbff;
     padding: 10px;
-    width: 80px;
+    width: 100px;
     height: auto;
-    border-radius: 100%;
+    border-radius: 50%;
+}
+
+.section-about .about-item{
+    height: 300px;
+    background-color: rgb(216 216 216);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & p{
+        padding-top: 30px;
+        text-align: center;
+    }
+    & .icon{
+        padding-top: 10px;
+    }
 }
 
 /*? -------------- End about Section --------------- */
